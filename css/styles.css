@@ -1,10 +1,6 @@
-/** 
- * Treehouse FSJS Techdegree
- * Random Quote Generator - CSS
- */
 
  body {
-    background-color: #36b55c;
+    background-color: black;
     color: white;
     font-family: 'Playfair Display', serif;
   }
@@ -33,13 +29,13 @@
   }
   
   .quote:before {
-    content: "â€œ";
+    content:;
     top: .25em;
     left: -.5em;
   }
   
   .quote:after {
-    content: "â€";
+    content:;
     bottom: -.1em;
     margin-left: .1em;
     position: absolute;
@@ -54,7 +50,7 @@
   }
   
   .source:before {
-    content: "â€”";
+    content:;
   }
   
   .citation {
@@ -81,9 +77,10 @@
     border-radius: 4px;
     border: 2px solid #fff;
     color: #fff;
-    background-color: #36b55c;
+    background-color: blue;
     padding: 15px 0;
     transition: .5s ;
+    opacity: 0.5;
   }
   #loadQuote:hover {
     background-color: rgba(255,255,255,.25);

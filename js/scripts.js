@@ -18,6 +18,8 @@ var quotes = [
     {
       quote: "Be thankful for what you have, you'll end up having more. If you concentrate on what you don't have, you will never have enough.",
       source: "-Oprah Winfrey",
+      year: 2011,
+      cite: "Oprah Life Class"
     },
     {
       quote: "Here's the problem. Most people are thinkin about what they don't want, and they're wondering why it shows up over and over again.",
@@ -45,8 +47,10 @@ var quotes = [
      - Create a variable to store a random number 
      - Cse the random number to `return` a random quote object from the `quotes` array.
   ***/
-  
-  
+  function getRandomQuote (){
+    var randomNumber = quotes [Math.floor( Math.random() * quotes.length)];
+    return randomNumber;
+  }
   
   
   /***
@@ -61,9 +65,35 @@ var quotes = [
      - Don't forget to close that final `p` tag.
      - Set the `innerHTML` of the `quote-box` div to the HTML string. 
   ***/
-  
-  
-  
+  function printQuote () {
+    var randomQuote = getRandomQuote();
+    var chosenQuote;
+    var chosenSource;
+    var chosenCite;
+    var chosenYear;
+    var outputQuote = document.getElementsByClassName('quote');
+    var outputYear = document.getElementsByClassName('year');
+    var outputCite = document.getElementsByClassName('citation');
+    var outputSource = document.getElementsByClassName('source');
+    for(var key in randomQuote){
+        if ( randomQuote.hasOwnProperty("year") || randomQuote.hasOwnProperty("cite") === true) {
+            chosenYear = randomQuote.year;
+            chosenCite = randomQuote.cite;
+            chosenQuote = randomQuote.quote;
+            chosenSource = randomQuote.source;
+            outputCite[0].innerHTML = chosenCite;
+            outputYear[0].innerHTML = chosenYear;
+            outputQuote[0].innerHTML = chosenQuote;
+            outputSource[0].innerHTML = chosenSource;
+        } else {
+            chosenQuote = randomQuote.quote;
+            chosenSource = randomQuote.source;
+            outputQuote[0].innerHTML = chosenQuote;
+            outputSource[0].innerHTML = chosenSource;
+        }
+    }
+}
+
   
   /***
     When the "Show another quote" button is clicked, the event listener 
