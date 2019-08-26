@@ -25,7 +25,7 @@ var quotes = [
   ];
   
   
-  
+
   
   /*
     This getRandomQuote function returns a random object out of the Quote array randomly and retruns it to the function
@@ -35,7 +35,7 @@ var quotes = [
     return randomNumber;
   }
   
-  
+printQuote();
   /*
     A print quote function that
     -Creates a randomQuote variable and stores the getRandomQuote function
